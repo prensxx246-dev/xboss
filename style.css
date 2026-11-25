@@ -3,7 +3,7 @@
   --card: #101a30;
   --card-light: #162440;
   --primary: #00d9ff;
-  --secondary: #8062ff;
+  --secondary: #7657ff;
   --white: #ffffff;
   --muted: #a5b2ca;
   --border: rgba(255,255,255,.09);
@@ -616,29 +616,14 @@ button {
 /* ANIMATIONS */
 
 .reveal {
-  opacity: 1;
-  transform: none;
-  transition: opacity .7s ease, transform .7s ease;
-}
-
-.reveal.reveal-pending {
   opacity: 0;
   transform: translateY(30px);
+  transition: opacity .7s ease, transform .7s ease;
 }
 
 .reveal.visible {
   opacity: 1;
   transform: translateY(0);
-}
-
-a:focus-visible,
-button:focus-visible {
-  outline: 3px solid var(--primary);
-  outline-offset: 4px;
-}
-
-button {
-  cursor: pointer;
 }
 
 @keyframes floating {
@@ -759,8 +744,7 @@ button {
     transition: none !important;
   }
 
-  .reveal,
-  .reveal.reveal-pending {
+  .reveal {
     opacity: 1;
     transform: none;
   }
